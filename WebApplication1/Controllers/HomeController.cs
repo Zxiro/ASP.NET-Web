@@ -10,13 +10,13 @@ namespace WebApplication1.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Index page.";
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult About(string id)
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = string.Concat("Your id is", id);
             return View();
         }
 
